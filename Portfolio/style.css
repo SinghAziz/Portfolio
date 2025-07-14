@@ -207,16 +207,17 @@ body {
   .recommendation {
     font-style: italic;
     text-align: left;
-    width: 21.875rem;
+    width : 20%;
+    align-self: self-start;
+    /* width: 21.875rem; */
     padding: 1rem;
     background-color: #fff;
     border-radius: 11px;
     box-shadow: 0 3px 10px var(--primary-shadow);
-    padding: 20px;
     margin: 10px;
     border:1px solid gray;
     font-size: 18px;
-    height:150px
+    height:auto;
   }
   
   .recommendation span {
