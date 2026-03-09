@@ -1,59 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Har Aziz Singh - Portfolio</title>
-    <link rel="stylesheet" href="./style.css"/>
-    <script src="./script.js"></script>
+    <meta
+      name="description"
+      content="Portfolio of Har Aziz Singh, Computer Science and Engineering student focusing on machine learning, computer vision, and full-stack development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav>
       <div id="home">
         <div class="profile_name">
-          Har Aziz Singh
+          <span class="logo_text">Har Aziz Singh</span>
           <div class="contact_info">
-            <img src="envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          singhharaziz@gmail.com
-        </div>
-        <div style="clear:both;"></div>
-        <div class="contact_info">
-          <img src="phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          +91 99154-73254
-
-        </div>
+            <img src="envelope.png" alt="Email icon" />
+            <a href="mailto:singhharaziz@gmail.com">singhharaziz@gmail.com</a>
+          </div>
+          <div class="contact_info">
+            <img src="phone.png" alt="Phone icon" />
+            <span>+91 99154 73254</span>
+          </div>
+          <div class="contact_info">
+            <span>
+              <a href="https://www.linkedin.com/in/har-aziz-singh/" target="_blank" rel="noreferrer">LinkedIn</a>
+              ·
+              <a href="https://github.com/SinghAziz" target="_blank" rel="noreferrer">GitHub</a>
+            </span>
+          </div>
         </div>
         <div class="topdiv">
-          <a class="topmenu" href="#about-me">About Me</a>
-          <!-- Add the links for Skills, Projects and Recommendation here -->
-          <div class="topdiv">
-            <a class="topmenu" href="#skills">Skills</a>
-          </div>
-          <div class="topdiv">
-            <a class="topmenu" href="#projects">Projects</a>
-          </div>
-          <div class="topdiv">
-            <a class="topmenu" href="#recommendations">Recommendations</a>
-          </div>
+          <a class="topmenu" href="#home">Home</a>
+          <a class="topmenu" href="#about-me">About</a>
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#experience">Experience</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#education">Education</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+          <a class="topmenu" href="#contact">Contact</a>
         </div>
-      </div>    
+      </div>
     </nav>
 
     <!-- About Me -->
     <section id="about-me" class="container">
       <div>
-        <img src="RamadaPhoto.gif" class="profile_image"/>
+        <img src="ProfilePhoto2.png" class="profile_image" alt="Portrait of Har Aziz Singh"/>
       </div>
 
-      <div>
+      <div class="about-content">
           <h1>
-            Hi, I'm Har Aziz Singh!
+            Hello, I'm Har Aziz Singh. <br/>
           </h1>
           <p>
-            I'm a passionate developer with strong skills in Python and Data Structures & Algorithms. 
-            I actively contribute to tech communities through talks, sessions, and mentoring. 
-            As a speaker and learner, I enjoy building meaningful projects, exploring new technologies, 
-            and sharing knowledge to inspire and uplift others in the tech space.
+            A Computer Science and Engineering student focused on machine learning, computer vision, and full-stack development. I enjoy turning real-world problems into reliable products and leading teams to ship meaningful work.
           </p>
+          <p>
+            Currently pursuing my B.Tech at Lovely Professional University and an exchange program at Institut Supérieur d'Électronique de Paris.
+          </p>
+          <div class="about-actions">
+            <a class="btn primary" href="Har_https://drive.google.com/file/d/1AjlR-MgXSx5OEgNVKNRcGl7tBGaJsw6-/view?usp=sharing" target="_blank">View CV</a>
+            <a class="btn outline" href="https://github.com/SinghAziz" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn outline" href="https://www.linkedin.com/in/har-aziz-singh/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
       </div>
     </section>
               
@@ -64,68 +80,57 @@
 
       <div class="all_skills">
         <div class="skill">
-          <img src="html5.png"/>
-          <h6>HTML</h6>
-          <p>2 years of experience</p>
+          <h6>Languages</h6>
+          <p>C++, C, SQL, Python, JavaScript, HTML, CSS</p>
+          <p class="skill-proof">Proof: <a href="#project-graphcam">GraphCam</a>, <a href="#project-nest">NEST</a>, <a href="#project-cattle-lens">Cattle Lens</a>, <a href="#experience-spark">SPARK</a></p>
         </div>  
 
         <div class="skill">
-          <img src="js.jpeg"/>
-          <h6>JavaScript</h6>
-          <p>2 years of experience</p>
+          <h6>Tools &amp; Frameworks</h6>
+          <p>Git, GitHub, PyTorch, TensorFlow</p>
+          <p class="skill-proof">Proof: <a href="#project-graphcam">GraphCam</a>, <a href="#project-cattle-lens">Cattle Lens</a>, <a href="#project-nest">NEST</a></p>
         </div>
 
         <div class="skill">
-          <img src="CSS3.png"/>
-          <h6>CSS</h6>
-          <p>2 years of experience</p>
-        </div>    
+          <h6>Soft Skills</h6>
+          <p>Leadership, Ownership, Problem Solving, Team Collaboration, Analytical Thinking</p>
+          <p class="skill-proof">Proof: <a href="#experience-spark">SPARK</a>, <a href="#experience-sukrit">SUKRIT</a>, <a href="#experience-znrg">ZNRG</a></p>
+        </div>
+      </div>
+    </section>
+          
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience &amp; Leadership</h2>
+      <div style="clear:both;"></div>
 
-        <div class="skill">
-            <img src="python.webp"/>
-            <h6>Python</h6>
-            <p>5 year of experience</p>
-        </div> 
-        <div class="skill">
-          <img src="C logo.png"/>
-          <h6>C</h6>
-          <p>1 year of experience</p>
-        </div>  
-        <div class="skill">
-            <img src="cpp logo.png"/>
-            <h6>C++</h6>
-            <p>1 year of experience</p>
-        </div>  
+      <div class="experience-list">
+        <div class="experience-card" id="experience-znrg">
+          <h3>ZNRG – Solar Analyst Intern</h3>
+          <p class="experience-meta">Sept 2024 – Dec 2024</p>
+          <ul>
+            <li>Acquired clients via CRM with 150+ calls daily to pitch solar solutions.</li>
+            <li>Closed 3 deals through structured follow-ups and customer-focused communication.</li>
+          </ul>
+        </div>
 
-        <div class="skill">
-          <img src="Nvivo_logo-removebg-preview.png"/>
-          <h6>NVivo</h6>
-          <p>1 month of experience</p>
-        </div>  
+        <div class="experience-card" id="experience-spark">
+          <h3>SPARK – Founder</h3>
+          <p class="experience-meta">Mar 2024 – Present</p>
+          <ul>
+            <li>Built and led a 60+ member student platform for hands-on projects, workshops, and leadership initiatives.</li>
+            <li>Co-developed the official website using JavaScript, Node.js, and MongoDB.</li>
+          </ul>
+        </div>
 
-        <div class="skill">
-          <img src="Matlab_Logo.png"/>
-          <h6>MATLAB</h6>
-          <p>1 month of experience</p>
-        </div>  
-
-        <div class="skill">
-          <img src="logo-mysql-170x115.png"/>
-          <h6>MySQL</h6>
-          <p>3 years of experience</p>
-        </div>  
-
-        <div class="skill">
-          <img src="github-mark.png"/>
-          <h6>GitHub</h6>
-          <p>2 years of experience</p>
-        </div>  
-
-
-
-        <!-- Add more skills here -->
-
-
+        <div class="experience-card" id="experience-sukrit">
+          <h3>SUKRIT – Director of Technology &amp; Public Relations</h3>
+          <p class="experience-meta">Feb 2024 – Oct 2024</p>
+          <ul>
+            <li>Coordinated cross-domain teams to analyze processes and improve organizational efficiency.</li>
+            <li>Led a cross-functional team to design and test the reader portal, focusing on reliability and user experience.</li>
+          </ul>
+        </div>
       </div>
     </section>
           
@@ -136,27 +141,80 @@
       </h2>
       <div style="clear:both;"></div>
 
-        <div id="projects-container" class="projects-container">
-          <div class="project-card">
-            <h3>Virtual Zoo</h3>
-            <ul>
-              <li>Domain: Website and Hardware |Programming Languages: HTML, CSS, JavaScript<br>
-                Software and hardware to display holograms of existing and extinct species of flora and fauna to depict complex ecosystems from various parts of the world. 
-                The virtual zoo could be displayed in schools, museums, and Ministries without using much physical space. 
-                The zoo could also hold educational sessions about the environment within the virtual space using pre-recorded videos of teachers from around the world.</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>NEST</h3>
-            <ul>
-              <li>Domain: Tailored Social Network | Programming Languages: Python, Flask, Socketio and Jinja2<br>
-                A tailored social network developed to provide a homely and cozy place for you and your friends. 
-                You have your flock and your chirps. Fly away!</li>
-            </ul>
-          </div>
-         <!--<hr>--><!--Use before adding more Projects-->
-    </div>
+      <div id="projects-container" class="projects-container">
+        <a href="https://github.com/SinghAziz/GraphCam" class="project-card" id="project-graphcam" target="_blank" rel="noreferrer">
+          <h3>GraphCam</h3>
+          <ul>
+            <li>
+              Built a CNN-based system in Python to predict equations from graph images with an end-to-end training and
+              inference pipeline.
+            </li>
+            <li>
+              Implemented image preprocessing, feature extraction, and spatial pattern recognition to automate
+              visual-to-symbolic graph interpretation.
+            </li>
+          </ul>
+          <span class="project-cta">View on GitHub →</span>
+        </a>
+        <hr>
+        <a href="https://github.com/kjanus03/tsn" class="project-card" id="project-nest" target="_blank" rel="noreferrer">
+          <h3>NEST</h3>
+          <ul>
+            <li>
+              Developed real-time chat and notification features for a Flask-based social networking application using
+              FOAF-modeled user relationships.
+            </li>
+            <li>
+              Enabled low-latency communication with a backend stack of Python, Socket.IO, and PostgreSQL backed by
+              structured SQL schemas.
+            </li>
+          </ul>
+          <span class="project-cta">View on GitHub →</span>
+        </a>
+        <hr>
+        <a href="https://github.com/SinghAziz/SIH25005-lmage-based-Animal-Type-Classification-for-cattle-and-buffaloes" class="project-card" id="project-cattle-lens" target="_blank" rel="noreferrer">
+          <h3>Cattle Lens</h3>
+          <ul>
+            <li>
+              Built a ResNet18-based PyTorch system to extract structured livestock attributes from a single image (animal
+              type, breed, size, weight, milk yield, tag ID).
+            </li>
+            <li>
+              Delivered an end-to-end deep learning pipeline to convert visual input into machine-readable livestock
+              records and reduce manual profiling.
+            </li>
+          </ul>
+          <span class="project-cta">View on GitHub →</span>
+        </a>
+      </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div style="clear:both;"></div>
+
+      <div class="education-list">
+        <div class="education-card">
+          <h3>Lovely Professional University, Phagwara, Punjab</h3>
+          <p class="education-meta">
+            B.Tech, Computer Science and Engineering · Aug 2023 – Present · CGPA: 8.69
+          </p>
+        </div>
+
+        <div class="education-card">
+          <h3>Institut Supérieur d'Électronique de Paris, France</h3>
+          <p class="education-meta">
+            B.Tech, Computer Science and Engineering – Exchange Program · Jan 2025 – June 2025
+          </p>
+        </div>
+
+        <div class="education-card">
+          <h3>Swami Sant Dass Public School, Phagwara, Punjab</h3>
+          <p class="education-meta">Intermediate · Apr 2022 – Mar 2023 · 85%</p>
+        </div>
+      </div>
     </section>
     <div style="clear:both;"></div>
 
@@ -166,49 +224,62 @@
       <div style="clear:both;"></div>
       <div class="all_recommendations" id="all_recommendations">
         <div class="recommendation">
-          <span>&#8220;</span>
-          Har Aziz brings unique insights to the table, isn't afraid of constructive feedback and takes his work with serious dedication 
-          Har Aziz is a pleasure to work with and I wish him all the best for his future endeavours
-          
-          <span>&#8221;</span>
-          <br>
-          - 
-          <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0">Roohbani Kaur</a>
+          <div class="recommendation-body">
+            <span class="rec-quote">&#8220;</span>
+            <p class="recommendation-text">Har Aziz brings unique insights to the table, isn't afraid of constructive feedback and takes his work with serious dedication. Har Aziz is a pleasure to work with and I wish him all the best for his future endeavours.</p>
+            <span class="rec-quote">&#8221;</span>
+          </div>
+          <div class="recommendation-footer">
+            <span class="recommendation-author">— <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">Roohbani Kaur</a></span>
+            <button type="button" class="read-more-btn">Read more</button>
+          </div>
         </div>
         <div class="recommendation">
-          <span>&#8220;</span>
-          Har Aziz has been a great asset to our project. He not only helped conduct multiple technical sessions but also led our design & testing teams for a range of projects. Har Aziz has a habit of bringing data insights into his tasks, and likes to undertake systematic approaches. 
+          <div class="recommendation-body">
+            <span class="rec-quote">&#8220;</span>
+            <p class="recommendation-text">Har Aziz has been a great asset to our project. He not only helped conduct multiple technical sessions but also led our design & testing teams for a range of projects. Har Aziz has a habit of bringing data insights into his tasks, and likes to undertake systematic approaches. 
           He took the lead in growing the campaign's digital presence, with impactful content on Instagram.
           Apart from tasks expected of him, he has volunteered in community development such as Saanjh sessions confucted by us. Har Aziz excels at public relations, effectively communicating the campaign’s goals, events, and values to a wider audience.
-          I whole heartedly recommend Har Aziz for any projects and activities that he seeks to step in. Wherever he goes, he will being immese value to the space.
-          <br>
-          - 
-          <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0">Inderpal Singh</a>
-          <span>&#8221;</span>
+          I whole heartedly recommend Har Aziz for any projects and activities that he seeks to step in. Wherever he goes, he will bring immense value to the space.</p>
+            <span class="rec-quote">&#8221;</span>
+          </div>
+          <div class="recommendation-footer">
+            <span class="recommendation-author">— <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">Inderpal Singh</a></span>
+            <button type="button" class="read-more-btn">Read more</button>
+          </div>
         </div>
         <div class="recommendation">
-          <span>&#8220;</span>
-          Aziz is a driven professional with an impressive combination of talent, dedication, and energy. 
+          <div class="recommendation-body">
+            <span class="rec-quote">&#8220;</span>
+            <p class="recommendation-text">Aziz is a driven professional with an impressive combination of talent, dedication, and energy. 
           During my first visits to India, he played a crucial role in facilitating workshops and bootcamps at Lovely Professional University (LPU), together with his Spark team. 
           From the very beginning, he stood out for his commitment, sharp insights, and his ability to seamlessly shift between different roles and responsibilities.
           What struck me most was his ability to quickly anticipate changing situations — whether it involved content-related challenges, group dynamics, or logistical issues, 
           Aziz remained sharp, calm, and solution-oriented. This adaptability, combined with his enthusiasm and strong communication skills, makes him a natural leader.
           Aziz is someone you truly enjoy working with: professional, reliable, and with a fresh perspective. I’m convinced he has a bright future ahead of him, 
           and I expect we’ll be hearing much more from him in the years to come! 
-        <br> -           
-        <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0">Mick Walvisch RM</a>         
-        <span>&#8221;</span>
+</p>
+            <span class="rec-quote">&#8221;</span>
+          </div>
+          <div class="recommendation-footer">
+            <span class="recommendation-author">— <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">Mick Walvisch RM</a></span>
+            <button type="button" class="read-more-btn">Read more</button>
+          </div>
         </div>
         <div class="recommendation">
-          <span>&#8220;</span>
-          I have had the opportunity to teach Har Aziz in Communication, and it’s been an absolute pleasure watching him grow. 
+          <div class="recommendation-body">
+            <span class="rec-quote">&#8220;</span>
+            <p class="recommendation-text">I have had the opportunity to teach Har Aziz in Communication, and it’s been an absolute pleasure watching him grow. 
           What has always stood out to me about Har Aziz is his genuine enthusiasm to learn and experiment with new ideas in the classroom. 
           He is incredibly hardworking, always pushing himself to think differently and come up with creative solutions. 
           His curiosity, willingness to ask questions, and constant effort to explore beyond the usual truly make him special.
-          I have no doubt that wherever Har Aziz goes, he will continue to shine and make a positive mark in any organization he becomes a part of.
-        <br> -           
-        <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0">Kirti Basra</a>         
-        <span>&#8221;</span>
+          I have no doubt that wherever Har Aziz goes, he will continue to shine and make a positive mark in any organization he becomes a part of.</p>
+            <span class="rec-quote">&#8221;</span>
+          </div>
+          <div class="recommendation-footer">
+            <span class="recommendation-author">— <a href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">Kirti Basra</a></span>
+            <button type="button" class="read-more-btn">Read more</button>
+          </div>
         </div>
       </div>
     </section>
@@ -217,7 +288,7 @@
     <section id="contact">
       <div class="flex_center">
         <fieldset>
-          <legend class="introduction">Leave a Recommendation</legend>          
+          <legend class="introduction">Contact / Leave a Recommendation</legend>          
           <input type="text" placeholder="Name (Optional)"> <br/>
           <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
           <div class="flex_center">
@@ -227,14 +298,13 @@
       </div>
     </section>
 
-    <!-- <div class="iconbutton">
-      <a href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="63px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        <!--Add the code here for the logo to appear and the icon to be actionable-->
+    <div class="iconbutton">
+      <a href="#home" aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
       </a>
-    </div> -->
+    </div>
 
     <div class="popup" id="popup" class="flex_center">
       <img src="html_finalprojimages/checkmark--outline.svg"/>
