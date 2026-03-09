@@ -66,7 +66,7 @@
             Currently pursuing my B.Tech at Lovely Professional University and an exchange program at Institut Supérieur d'Électronique de Paris.
           </p>
           <div class="about-actions">
-            <a class="btn primary" href="Har_https://drive.google.com/file/d/1AjlR-MgXSx5OEgNVKNRcGl7tBGaJsw6-/view?usp=sharing" target="_blank">View CV</a>
+            <a class="btn primary" href="./Har%20Aziz%20Singh.pdf" download="Har Aziz Singh.pdf">View CV</a>
             <a class="btn outline" href="https://github.com/SinghAziz" target="_blank" rel="noreferrer">GitHub</a>
             <a class="btn outline" href="https://www.linkedin.com/in/har-aziz-singh/" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
@@ -81,20 +81,17 @@
       <div class="all_skills">
         <div class="skill">
           <h6>Languages</h6>
-          <p>C++, C, SQL, Python, JavaScript, HTML, CSS</p>
-          <p class="skill-proof">Proof: <a href="#project-graphcam">GraphCam</a>, <a href="#project-nest">NEST</a>, <a href="#project-cattle-lens">Cattle Lens</a>, <a href="#experience-spark">SPARK</a></p>
+          <p><a href="#project-graphcam">C++</a>, <a href="#project-nest">C</a>, <a href="#project-nest">SQL</a>, <a href="#project-graphcam">Python</a>, <a href="#experience-spark">JavaScript</a>, <a href="#experience-spark">HTML</a>, <a href="#experience-spark">CSS</a></p>
         </div>  
 
         <div class="skill">
           <h6>Tools &amp; Frameworks</h6>
-          <p>Git, GitHub, PyTorch, TensorFlow</p>
-          <p class="skill-proof">Proof: <a href="#project-graphcam">GraphCam</a>, <a href="#project-cattle-lens">Cattle Lens</a>, <a href="#project-nest">NEST</a></p>
+          <p><a href="#project-graphcam">Git</a>, <a href="#projects">GitHub</a>, <a href="#project-cattle-lens">PyTorch</a>, <a href="#project-graphcam">TensorFlow</a></p>
         </div>
 
         <div class="skill">
           <h6>Soft Skills</h6>
-          <p>Leadership, Ownership, Problem Solving, Team Collaboration, Analytical Thinking</p>
-          <p class="skill-proof">Proof: <a href="#experience-spark">SPARK</a>, <a href="#experience-sukrit">SUKRIT</a>, <a href="#experience-znrg">ZNRG</a></p>
+          <p><a href="#experience-spark">Leadership</a>, <a href="#experience-spark">Ownership</a>, <a href="#experience-sukrit">Problem Solving</a>, <a href="#experience-sukrit">Team Collaboration</a>, <a href="#experience-znrg">Analytical Thinking</a></p>
         </div>
       </div>
     </section>
@@ -284,15 +281,37 @@
       </div>
     </section>
 
-    <!-- Recommendation Form -->
+    <!-- Recommendation CTA -->
+    <section id="recommendation-cta">
+      <div class="flex_center">
+        <div class="recommendation-cta-card">
+          <p class="recommendation-cta-text">Want to recommend me?</p>
+          <a
+            class="btn outline recommendation-direct-btn"
+            href="https://www.linkedin.com/in/har-aziz-singh/details/recommendations/?detailScreenTabIndex=0"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Give Recommendation on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
     <section id="contact">
       <div class="flex_center">
         <fieldset>
-          <legend class="introduction">Contact / Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <legend class="introduction">Contact</legend>
+          <label class="contact-label" for="contact_name">Name <span class="required-mark">*</span></label>
+          <input type="text" id="contact_name" placeholder="Name" required> <br/>
+          <label class="contact-label" for="contact_email">Email <span class="required-mark">*</span></label>
+          <input type="email" id="contact_email" placeholder="Your Email" required> <br/>
+          <label class="contact-label" for="new_recommendation">Message <span class="required-mark">*</span></label>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message" required></textarea>
+          <p id="contact_feedback" class="contact-feedback" aria-live="polite"></p>
           <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+            <button id="recommend_btn" onclick="addRecommendation()">Send Message</button>
           </div>
         </fieldset>
       </div>
@@ -307,9 +326,9 @@
     </div>
 
     <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3>Thanks for the recommendation! </h3>
-      <button onclick="showPopup(false)" id="recommend_btn"> OK</button>
+      <div class="popup-emoji" aria-hidden="true">😊</div>
+      <h3>I will get in touch with you shortly!</h3>
+      <button onclick="showPopup(false)" id="popup_ok_btn">OK</button>
     </div>
 
     <script>

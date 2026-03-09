@@ -314,6 +314,18 @@ h2::after {
   line-height: 1.5;
 }
 
+.skill p a {
+  color: var(--text-muted);
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.skill p a:hover {
+  color: var(--accent-hover);
+  border-bottom-color: var(--accent-hover);
+}
+
 .skill-proof {
   margin-top: 12px !important;
   font-size: 12px !important;
@@ -614,6 +626,12 @@ h2::after {
   padding-top: 16px;
 }
 
+.popup-emoji {
+  font-size: 42px;
+  line-height: 1;
+  margin-top: 6px;
+}
+
 .popup h3 {
   color: var(--text);
   margin: 16px 0;
@@ -643,10 +661,73 @@ h2::after {
   max-width: 400px;
 }
 
+.contact-actions {
+  margin: 4px 0 12px;
+}
+
+.recommendation-direct-btn {
+  width: auto;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#recommendation-cta {
+  padding-top: 28px;
+  padding-bottom: 16px;
+}
+
+.recommendation-cta-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.recommendation-cta-text {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 15px;
+}
+
+#contact {
+  padding-top: 20px;
+}
+
+.contact-label {
+  display: block;
+  color: var(--text);
+  font-size: 13px;
+  margin: 8px 0 4px;
+}
+
+.required-mark {
+  color: var(--accent-hover);
+  font-size: 10px;
+  opacity: 0.6;
+  vertical-align: super;
+}
+
+.contact-feedback {
+  min-height: 18px;
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #ff9f9f;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.contact-feedback.show {
+  opacity: 1;
+}
+
 input, textarea {
   font-family: inherit;
   margin: 10px 0;
   width: 100%;
+  box-sizing: border-box;
   padding: 12px 16px;
   background: var(--bg-dark);
   border: 1px solid var(--border);
