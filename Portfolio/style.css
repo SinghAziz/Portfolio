@@ -133,6 +133,7 @@ nav {
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.5px;
+  text-decoration: none;
 }
 
 .profile_name .contact_info {
