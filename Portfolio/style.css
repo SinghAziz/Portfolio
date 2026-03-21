@@ -76,6 +76,7 @@ nav {
 #home {
   padding: 16px 8vw;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
@@ -86,6 +87,7 @@ nav {
   margin: 4px 6px;
   padding: 8px 14px;
   font-size: 14px;
+  white-space: nowrap;
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.25s ease;
@@ -115,16 +117,55 @@ nav {
 
 .topdiv {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
+  min-width: 0;
   align-items: center;
   justify-content: flex-end;
   gap: 4px;
   margin-left: auto;
+  overflow-x: auto;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle[aria-expanded='true'] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded='true'] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .profile_name {
   display: flex;
   flex-direction: column;
+  flex: 0 0 auto;
   gap: 6px;
 }
 
@@ -608,7 +649,7 @@ h2::after {
 
 /* Form Pop-up */
 .popup {
-  width: 380px;
+  width: min(380px, calc(100vw - 32px));
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -804,25 +845,213 @@ button:hover {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   #home {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 14px 5vw;
+    gap: 20px;
   }
 
+  .nav-toggle {
+    display: inline-flex;
+    margin-left: auto;
+  }
+
+  .topdiv {
+    width: 100%;
+    margin-left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px;
+    background: rgba(17, 24, 39, 0.85);
+    overflow-x: visible;
+  }
+
+  .topdiv.open {
+    display: flex;
+  }
+
+  .topmenu {
+    width: 100%;
+  }
+
+  section,
   .container {
-    padding: 48px 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 
   #about-me h1 {
-    font-size: 32px;
+    font-size: 36px;
+  }
+
+  .about-content,
+  #about-me p {
+    max-width: 100%;
+  }
+
+  .experience-card,
+  .education-card,
+  .skill,
+  .recommendation {
+    flex-basis: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  #home {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 4vw;
+  }
+
+  .topmenu {
+    white-space: normal;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .profile_name {
+    gap: 4px;
+  }
+
+  .logo_text {
+    font-size: 18px;
+  }
+
+  .profile_name .contact_info {
+    font-size: 12px;
+  }
+
+  .contact_info img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .container {
+    padding: 44px 4vw;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  #about-me h1 {
+    font-size: 30px;
   }
 
   section {
-    padding: 60px 5vw 40px;
+    padding: 52px 4vw 36px;
   }
 
   h2 {
+    font-size: 25px;
+    margin-bottom: 24px;
+  }
+
+  .profile_image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .project-card,
+  .experience-card,
+  .education-card,
+  .recommendation,
+  .skill {
+    padding: 18px;
+  }
+
+  .projects-container hr {
+    margin: 24px 0;
+  }
+
+  .project-card h3 {
+    font-size: 18px;
+  }
+
+  .project-card li,
+  .experience-card li,
+  .skill p,
+  .recommendation {
+    font-size: 14px;
+  }
+
+  #contact fieldset {
+    width: 100%;
+    max-width: 100%;
+    padding: 22px;
+  }
+
+  .introduction {
+    white-space: normal;
+    font-size: 22px;
+  }
+
+  button,
+  .btn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+
+  section {
+    padding-top: 44px;
+    padding-bottom: 30px;
+  }
+
+  #about-me h1 {
     font-size: 26px;
+  }
+
+  #about-me p {
+    font-size: 15px;
+  }
+
+  .profile_image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-actions {
+    gap: 8px;
+  }
+
+  .topmenu {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .nav-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .recommendation-footer {
+    align-items: flex-start;
+  }
+
+  .popup {
+    padding: 18px;
+  }
+
+  .popup h3 {
+    margin: 12px 0;
+    font-size: 17px;
+  }
+
+  .iconbutton {
+    width: 42px;
+    height: 42px;
+    right: 14px;
+    bottom: 14px;
   }
 }

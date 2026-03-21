@@ -8,6 +8,17 @@ document.getElementById('all_recommendations')?.addEventListener('click', functi
   btn.textContent = card.classList.contains('expanded') ? 'Read less' : 'Read more';
 });
 
+const navToggleBtn = document.getElementById('nav_toggle');
+const navMenu = document.getElementById('nav_menu');
+
+if (navToggleBtn && navMenu) {
+  navToggleBtn.addEventListener('click', function () {
+    const expanded = navToggleBtn.getAttribute('aria-expanded') === 'true';
+    navToggleBtn.setAttribute('aria-expanded', String(!expanded));
+    navMenu.classList.toggle('open', !expanded);
+  });
+}
+
 // Smooth scroll for nav links with offset for sticky nav
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -23,6 +34,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       const navHeight = document.querySelector('nav')?.offsetHeight || 0;
       const targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
       window.scrollTo({ top: targetPos, behavior: 'smooth' });
+
+      if (navMenu?.classList.contains('open')) {
+        navMenu.classList.remove('open');
+        navToggleBtn?.setAttribute('aria-expanded', 'false');
+      }
     }
   });
 });
